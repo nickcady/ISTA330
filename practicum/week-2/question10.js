@@ -16,5 +16,21 @@ output: [[-5, -4], [23, 24]]
 */
 
 var minPairs = function(input) {
-
+    let pairs = [];
+    let min = 100;
+    for (let i = 0; i < input.length; i++) {
+        for (let j = 0; j < input.length; j++) {
+            if (i != j && input[i] < input[j]) {
+                if  (Math.abs(input[j] - input[i]) == min) {
+                    pairs.push([input[i],input[j]]);
+                }
+                if (Math.abs(input[j] - input[i]) < min) {
+                    min =  Math.abs(input[j] - input[i]);
+                    pairs = [];
+                    pairs.push([input[i],input[j]]);
+                }
+            }
+        }
+    }
+    return pairs;
 };

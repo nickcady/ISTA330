@@ -13,5 +13,17 @@ output: 3
 */
 
 var d_integer = function(input) {
-
+    let dict = {};
+    for (let i = 0; i < input.length; i++) {
+        if (!(input[i] in dict)) {
+            dict[input[i]] = 0;
+        }
+        dict[input[i]] = dict[input[i]] + 1;
+    }
+    for (let i = 0; i < input.length; i++) {
+        if (dict[input[i]] = input[i]) {
+            return input[i];
+        }
+    }
+    return -1;
 };

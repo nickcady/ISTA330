@@ -12,5 +12,19 @@ output: 2
 */
 
 var m_element = function(input) {
-
+    let dict = {};
+    for (let i = 0; i < input.length; i++) {
+        if (!(input[i] in dict)) {
+            dict[input[i]] = 0;
+        }
+        dict[input[i]] = dict[input[i]] + 1;
+    }
+    let number = 0;
+    let max = 0; 
+    for (var key in dict) {
+        if (dict[key] > input.length/2) {
+            return key;
+        }
+    }
+    return -1;
 };

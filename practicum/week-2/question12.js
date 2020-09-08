@@ -9,5 +9,16 @@ Given n, calculate F(n).
 */
 
 var F = function(n) {
-
+    if (n == 0) {
+        return 0;
+    }
+    let prev = 0;
+    let curr = 1; 
+    for (let i = 1; i < n; i++) {
+        let temp = curr + prev;
+        prev = curr;
+        curr = temp;
+    }
+    return curr;
 };
+console.log(F(9));
