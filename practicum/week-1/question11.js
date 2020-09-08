@@ -9,5 +9,11 @@ output: [5, 5, 2, 2, 2, 2]
 */
 
 var decode = function(input) {
-
+    let decoded = [];
+    for (let i = 0; i < input.length; i = i + 2) {
+        for (let j = 0; j < input[i]; j++) {
+            decoded.push(input[i + 1]);
+        }
+    }
+    return decoded;
 };
