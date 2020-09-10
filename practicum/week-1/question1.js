@@ -10,8 +10,8 @@ var runningSum = function(input) {
    let past = 0;
    let i;
    for (i = 0; i < input.length; i++) {
-      returning[i] = input[i] + past;
       past += input[i];
+      returning[i] = past;
    }
    return returning;
 };
