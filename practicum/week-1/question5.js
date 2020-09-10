@@ -17,15 +17,14 @@ var minimalReduction = function(n) {
         if (n % 4 == 0) {
             n = n / 4;
             count++;
-            continue;
         }
-        if (n % 3 == 0) {
+        else if (n % 3 == 0) {
             n = n / 3;
             count++;
-            continue;
+        } else {
+            n -= 1;
+            count++;
         }
-        n -= 1;
-        count++;
     }
     return count;
 };
