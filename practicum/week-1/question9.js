@@ -15,5 +15,3 @@ var suffleString = function(input, shuffleIndices) {
     }
     return newStr.join('');
 };
-
-console.log(suffleString('llheo', [2, 3, 0, 1, 4]));
