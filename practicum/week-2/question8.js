@@ -21,7 +21,7 @@ var d_integer = function(input) {
         dict[input[i]] = dict[input[i]] + 1;
     }
     for (let i = 0; i < input.length; i++) {
-        if (dict[input[i]] = input[i]) {
+        if (dict[input[i]] ==  input[i]) {
             return input[i];
         }
     }
