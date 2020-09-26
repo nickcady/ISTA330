@@ -51,10 +51,17 @@
              rose,
              waterlily
        ];
-       let img = document.createElement("IMG");
-       img.src = flowers[0].picture;
-       let flowersDiv = document.getElementById("flowersDiv");
-       flowersDiv.appendChilld(img);
+       for (let i = 0; i < flowers.length; i+=4) {
+           row = document.createElement("ROW");
+           for (let j = i; j < i + 4; j++) {
+                let img = document.createElement("IMG");
+                img.src = "images/" + flowers[j].picture;
+                row.appendChild(img);
+           };
+           lb = document.createElement("BR");
+           document.getElementById("flowersDiv").appendChild(row);
+           document.getElementById("flowersDiv").appendChild(lb);
+       }
 
     </script>
 </body>
